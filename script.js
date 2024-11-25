@@ -1,5 +1,7 @@
 // OpenWeather API Key and URL
-const apiKey = "5ca5a24ae71e2ff3a3bbdb5fcf1e1a0f";
+require('dotenv').config();
+const apiKey=process.env.apiKey
+console.log(apiKey)
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 // DOM Elements
