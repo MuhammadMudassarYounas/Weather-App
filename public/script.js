@@ -5,6 +5,15 @@ document.querySelector('button').addEventListener('click', () => {
     }
 });
 
+document.querySelector('input').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') { // Check if the key pressed is Enter
+        const city = document.querySelector('input').value;
+        if (city) {
+            checkWeather(city);
+        }
+    }
+});
+
 async function checkWeather(city) {
     try {
         const response = await fetch(`/weather?city=${city}`);
